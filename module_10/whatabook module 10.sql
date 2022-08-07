@@ -1,15 +1,3 @@
-import mysql.connector
-
-mydb = mysql.connector.connect(
-  host="localhost",
-  user="whatbook_user",
-  password="MySQL8IsGreat!"
-)
-
-mycursor = mydb.cursor()
-
-mycursor.execute("CREATE DATABASE whatabook")
-
 DROP USER IF EXISTS 'whatabook_user'@'localhost';
 
 CREATE USER 'whatabook_user'@'localhost'; IDENTIFIED WITH mysql_native_password BY 'MySQL8IsGreat!'
@@ -85,16 +73,16 @@ INSERT INTO user(first_name, last_name)
 
 INSERT INTO wishlist(user_id, book_id)
     VALUES(
-        (SELECT user_id FROM user WHERE last_name = 'Meehan');
+        (SELECT user_id FROM user WHERE last_name = 'Cillian');
         (SELECT book_id FROM WHERE book_name = 'Finn');
     );
 INSERT INTO wishlist(user_id, book_id)
     VALUES (
-        (SELECT user_id FROM user WHERE last_name = 'OFarrell');
+        (SELECT user_id FROM user WHERE first_name = 'Finn');
         (SELECT book_id FROM WHERE book_name = 'Preacher');
     );
 INSERT INTO wishlist(User_id, book_id)
     VALUES(
-        (SELECT user_id FROM user WHERE last_name = 'Garvey');
+        (SELECT user_id FROM user WHERE first_name = 'Darryl');
         (SELECT book_id FROM user WHERE book_name = 'Demon');
     );
