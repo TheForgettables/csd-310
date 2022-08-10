@@ -78,11 +78,11 @@ INSERT INTO wishlist(user_id, book_id)
     );
 INSERT INTO wishlist(user_id, book_id)
     VALUES (
-        (SELECT user_id FROM user WHERE first_name = 'Finn');
+        (SELECT user_id FROM user WHERE last_name = 'OFarrel');
         (SELECT book_id FROM WHERE book_name = 'Preacher');
     );
 INSERT INTO wishlist(User_id, book_id)
     VALUES(
-        (SELECT user_id FROM user WHERE first_name = 'Darryl');
+        (SELECT user_id FROM user WHERE last_name = 'Darryl');
         (SELECT book_id FROM user WHERE book_name = 'Demon');
     );
